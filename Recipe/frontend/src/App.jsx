@@ -137,6 +137,11 @@ function App() {
   return (
     <div className={`app-container ${messages.length > 0 ? 'chat-active' : ''} ${isSidebarOpen ? 'sidebar-open' : ''}`}>
       
+      {/* SIDEBAR OVERLAY FOR MOBILE */}
+      {isSidebarOpen && (
+        <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)}></div>
+      )}
+
       {/* SIDEBAR */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
