@@ -17,6 +17,7 @@ from langchain_community.vectorstores import FAISS
 # Prompt Template
 from langchain_core.prompts import PromptTemplate
 # LLM
+# pyrefly: ignore [missing-import]
 from langchain_groq import ChatGroq
 # Memory
 from langchain_classic.memory import ConversationBufferMemory

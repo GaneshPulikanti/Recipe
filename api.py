@@ -23,6 +23,15 @@ app.add_middleware(
 RECENTS_DIR = "recents"
 os.makedirs(RECENTS_DIR, exist_ok=True)
 
+@app.get("/")
+async def root():
+    return {
+        "status": "ok",
+        "service": "RecipeGPT API",
+        "version": "1.0.0",
+        "docs": "/docs"
+    }
+
 # Global variables to hold our Langchain models
 qa_chain = None
 
